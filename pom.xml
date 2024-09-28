@@ -80,18 +80,7 @@
                             <npmVersion>10.1.0</npmVersion>
                         </configuration>
                     </execution>
-
-                    <execution>
-                        <id>npm install</id>
-                        <goals>
-                            <goal>npm</goal>
-                        </goals>
-                        <phase>generate-resources</phase>
-                        <configuration>
-                            <arguments>install</arguments>
-                        </configuration>
-                    </execution>
-
+					
                     <execution>
                         <id>npm run build</id>
                         <goals>
