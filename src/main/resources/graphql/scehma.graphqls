@@ -1,0 +1,17 @@
+type Post {
+    id: Int!
+    title: String!
+    category: String
+    data: String!
+}
+
+# The Root Query for the application
+type Query {
+    getAllPosts: [Post]!
+    greeting(name: String!): String
+}
+
+# The Root Mutation for the application
+type Mutation {
+    createPost(id: Int!, title: String!, category: String, data: String!): Post!
+}
