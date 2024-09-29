@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+out.log
+testdb.mv.db
+testdb.trace.db

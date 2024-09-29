@@ -2,7 +2,7 @@ type Post {
     id: Int!
     title: String!
     category: String
-    data: String!
+    info: String!
 }
 
 # The Root Query for the application
@@ -13,5 +13,5 @@ type Query {
 
 # The Root Mutation for the application
 type Mutation {
-    createPost(id: Int!, title: String!, category: String, data: String!): Post!
+    createPost(id: Int!, title: String!, category: String, info: String!): Post!
 }

@@ -1,21 +1,15 @@
 package com.tochy.graphql.repository;
 
-import java.util.List;
-import java.util.ArrayList;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
+import java.util.List;
 
 import com.tochy.graphql.model.Post;
 
 @Repository
-public class PostRepository {
+public interface PostRepository extends CrudRepository<Post, Integer> {
     
-    private List<Post> posts = new ArrayList<>();
+    @Override
+    public List<Post> findAll();
 
-    public List<Post> findAll() {
-        return posts;
-    }
-
-    public void save(Post post) {
-        posts.add(post);
-    }
 }

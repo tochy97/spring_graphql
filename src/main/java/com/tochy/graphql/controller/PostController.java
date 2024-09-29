@@ -6,26 +6,26 @@ import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
 
 import com.tochy.graphql.model.Post;
-import com.tochy.graphql.repository.PostRepository;
+import com.tochy.graphql.service.PostService;
 
 @Controller
 public class PostController {
 
-    private final PostRepository postRepository;
+    private final PostService postService;
 
-    public PostController(PostRepository postRepository) {
-        this.postRepository = postRepository;
+    public PostController(PostService postService) {
+        this.postService = postService;
     }
 
     @QueryMapping
     public Iterable<Post> getAllPosts() {
-        return postRepository.findAll();
+        return postService.findAll();
     }
 
     @MutationMapping    
-    public Post createPost(@Argument Integer id, @Argument String title, @Argument String category, @Argument String data) {
-        Post post = new Post(id, title, category, data);
-        postRepository.save(post);
+    public Post createPost(@Argument Integer id, @Argument String title, @Argument String category, @Argument String info) {
+        Post post = new Post(id, title, category, info);
+        postService.save(post);
 
         return post;
     }
