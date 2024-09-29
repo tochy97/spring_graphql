@@ -1,6 +1,7 @@
 package com.tochy.graphql.controller;
 
 import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
 
@@ -21,10 +22,9 @@ public class PostController {
         return postRepository.findAll();
     }
 
-    @QueryMapping    
+    @MutationMapping    
     public Post createPost(@Argument Integer id, @Argument String title, @Argument String category, @Argument String data) {
         Post post = new Post(id, title, category, data);
-
         postRepository.save(post);
 
         return post;
@@ -32,7 +32,6 @@ public class PostController {
 
     @QueryMapping
     public String greeting(@Argument String name) {
-        System.out.println("\n\nrequest-> " + name);
         return "Hello" + name;
     }
 }
