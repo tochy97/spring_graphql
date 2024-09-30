@@ -1,6 +1,3 @@
-[submodule "src/tochyegeonu_dot_com"]
-	path = src/tochyegeonu_dot_com
-	url = https://github.com/tochy97/tochyegeonu_dot_com
 [submodule "src/react-types"]
 	path = src/react-types
 	url = https://github.com/tochy97/react-types
