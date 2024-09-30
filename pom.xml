@@ -103,7 +103,7 @@
                 </executions>
                 <configuration>
                     <nodeVersion>v20.8.0</nodeVersion>
-                    <workingDirectory>src/tochyegeonu_dot_com</workingDirectory>
+                    <workingDirectory>src/react-types</workingDirectory>
                 </configuration>
 
             </plugin>
@@ -122,7 +122,7 @@
                             <outputDirectory>target/classes/static</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>src/tochyegeonu_dot_com/build</directory>
+                                    <directory>src/react-types/build</directory>
                                     <filtering>true</filtering>
                                 </resource>
                             </resources>
