@@ -1,4 +1,4 @@
-﻿# Spring with Graphql
+﻿# Spring with Graphql; Frontend React Typescripts with tailwind
 
 ## To Test
 
