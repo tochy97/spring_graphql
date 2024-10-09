@@ -28,7 +28,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Checkout submodules
-    - uses: actions/checkout@v4
+      uses: actions/checkout@v4
       with:
           submodules: 'true'
     - name: Build with Maven
