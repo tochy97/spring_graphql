@@ -27,6 +27,10 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
+    - name: Checkout submodules
+    - uses: actions/checkout@v4
+      with:
+          submodules: 'true'
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
